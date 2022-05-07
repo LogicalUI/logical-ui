@@ -1,0 +1,4 @@
+packages:
+  - 'packages/**'
+  # 排除测试文件
+  - '!**/test/**'
