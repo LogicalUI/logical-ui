@@ -1,6 +1,6 @@
 import { defineComponent, createVNode, resolveDynamicComponent } from 'vue'
 
-export const Button = defineComponent({
+export default defineComponent({
   name: 'LCButton',
   setup(_, { slots }) {
     return () => (

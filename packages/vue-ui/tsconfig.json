@@ -1,0 +1,22 @@
+{
+  // "include": ["src/**/*.{ts,tsx}"],
+  // "exclude": ["src/**/__tests__/**"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {},
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "useDefineForClassFields": true,
+    "jsx": "preserve",
+    "noImplicitThis": true,
+    "strict": true,
+    "isolatedModules": true,
+    "preserveValueImports": true,
+    "importsNotUsedAsValues": "error",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  }
+}

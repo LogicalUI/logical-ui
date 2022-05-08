@@ -1,8 +1,25 @@
 {
-  "name": "@logical-ui/vue-ui",
+  "name": "@logical-ui/vue",
   "version": "0.0.0",
   "author": "whylost",
   "license": "MIT",
+  "main": "lib/index.js",
+  "module": "esm/index.mjs",
+  "unpkg": "dist/index.full.js",
+  "types": "esm/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./es/index.mjs"
+    },
+    "./es": "./esm/index.mjs",
+    "./lib": "./lib/index.js",
+    "./es/*.mjs": "./esm/*.mjs",
+    "./es/*": "./esm/*.mjs",
+    "./lib/*.js": "./lib/*.js",
+    "./lib/*": "./lib/*.js",
+    "./*": "./*"
+  },
   "scripts": {
     "build": "esno scripts/build.ts"
   },
@@ -10,7 +27,9 @@
     "@vitejs/plugin-vue": "^2.3.2",
     "@vitejs/plugin-vue-jsx": "^1.3.10",
     "esno": "^0.14.1",
+    "typescript": "^4.6.4",
     "vite": "^2.9.8",
+    "vite-plugin-dts": "^1.1.1",
     "vue": "^3.2.33"
   },
   "peerDependencies": {

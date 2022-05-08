@@ -1,17 +1,17 @@
 {
-  "name": "@logical-ui/vue-ui-core",
+  "name": "@logical-ui/vue-core",
   "version": "0.0.0",
   "author": "whylost",
   "license": "MIT",
   "files": [
     "dist"
   ],
-  "main": "./dist/index.umd.js",
+  "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
   "exports": {
     ".": {
       "import": "./dist/index.esm.js",
-      "require": "./dist/index.umd.js"
+      "require": "./dist/index.js"
     }
   },
   "scripts": {
