@@ -1,6 +1,6 @@
 import { defineComponent, createVNode, resolveDynamicComponent } from 'vue'
 
-export const Icon = defineComponent({
+export default defineComponent({
   name: 'LCIcon',
   setup(_, { slots }) {
     return () => <button>123</button>

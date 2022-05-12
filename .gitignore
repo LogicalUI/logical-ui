@@ -4,5 +4,9 @@ coverage*
 lib*
 *.log*
 *.tmp
+# 打包文件夹
 dist
+esm
+lib
+# 依赖
 node_modules
