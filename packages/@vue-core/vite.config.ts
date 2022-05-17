@@ -1,6 +1,5 @@
 import { defineConfig, type ConfigEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
 import dts from 'vite-plugin-dts'
 import { resolve } from 'path'
 import { fileURLToPath } from 'url'
@@ -19,10 +18,9 @@ export default defineConfig((env: ConfigEnv) => ({
   root: '.',
   plugins: [
     vue(),
-    vueJsx(),
     dts({
       entryRoot: resolve('src'),
-      outputDir: resolve(env.mode === 'dev' ? 'types' : 'lib/es'),
+      outputDir: resolve('types'),
       staticImport: true
     })
   ],
@@ -32,9 +30,10 @@ export default defineConfig((env: ConfigEnv) => ({
     }
   },
   build: {
-    target: 'modules',
+    target: 'es2019',
     outDir: resolve('lib'),
     minify: false,
+    emptyOutDir: true,
     lib: {
       name: 'logical-ui-vue-core',
       entry: 'src/index.ts'
@@ -43,7 +42,10 @@ export default defineConfig((env: ConfigEnv) => ({
       input: 'src/index.ts',
       // 确保外部化处理那些你不想打包进库的依赖
       external: ['vue'],
-      output: [createOutputConfig('es'), createOutputConfig('cjs')]
+      output: [
+        createOutputConfig('es'),
+        ...(env.mode === 'dev' ? [] : [createOutputConfig('cjs')])
+      ]
     }
   }
 }))

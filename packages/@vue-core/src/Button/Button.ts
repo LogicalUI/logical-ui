@@ -1,4 +1,4 @@
-import { defineComponent } from 'vue'
+import { defineComponent, h } from 'vue'
 import { tagWithDefault } from '@/_utils/props-type'
 import Box from '../Box'
 
@@ -7,9 +7,9 @@ const props = {
 } as const
 
 export const Button = defineComponent({
-  name: 'Button',
+  name: 'LButton',
   props,
   setup(props, { slots, attrs }) {
-    return () => <Box Tag={props.Tag} {...attrs} v-slots={slots} />
+    return () => h(Box, { Tag: props.Tag, ...attrs }, slots)
   }
 })

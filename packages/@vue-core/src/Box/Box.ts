@@ -1,5 +1,5 @@
 import { tagWithDefault } from '@/_utils/props-type'
-import { defineComponent } from 'vue'
+import { defineComponent, h, toRef } from 'vue'
 
 const props = {
   Tag: tagWithDefault('div')
@@ -8,6 +8,7 @@ export const Box = defineComponent({
   name: 'Box',
   props,
   setup(props, { slots, attrs }) {
-    return () => <props.Tag {...attrs}>{slots.default?.()}</props.Tag>
+    // <props.Tag {...attrs}>{slots.default?.()}</props.Tag>
+    return () => h(props.Tag, { ...attrs }, slots.default?.())
   }
 })
