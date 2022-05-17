@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "nuxt-app1",
+  "scripts": {
+    "build": "nuxt build",
+    "start": "node .output/server/index.mjs",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0-rc.3",
+    "ufo": "^0.8.4",
+    "vue": "^3.2.33"
+  }
+}
