@@ -1,5 +1,6 @@
 {
   "private": true,
+  "name": "nuxt-app22",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
