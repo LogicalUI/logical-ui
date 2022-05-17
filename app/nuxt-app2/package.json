@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "nuxt-app22",
+  "name": "nuxt-app2",
   "scripts": {
     "build": "nuxt build",
     "start": "node .output/server/index.mjs",
